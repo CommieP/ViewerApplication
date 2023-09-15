@@ -1,10 +1,13 @@
-import NumberInput from "./blocks/NumberInput"
+import RoutesHOC from "./routes"
+import store from "./store" 
+import { Provider } from "react-redux" 
 
 function App() {
   return (
     <>
-      <div className='w-screen h-[10vh] bg-indigo-500'></div>
-      <NumberInput id = "scale" ></NumberInput>
+      <Provider store={store}>
+        <RoutesHOC></RoutesHOC>
+      </Provider>
     </>
   )
 }

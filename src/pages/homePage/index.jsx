@@ -1,7 +1,11 @@
+import SetupEditor from "../../components/SetupEditor"
+
 const HomePage = () => {
     return (
         <>
-        <div className="bg-indigo-100 w-screen h-screen"></div>
+        <SetupEditor></SetupEditor>
         </>
     )
 }
+
+export default HomePage
