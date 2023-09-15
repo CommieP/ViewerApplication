@@ -1,7 +1,7 @@
-const Button  = (Title, onClick) => {
+const AppButton  = ({title, onClick}) => {
     return (
-        <button onClick={onClick}>{Title}</button>
+        <button onClick={onClick}>{title}</button>
     )
 }
 
-export default Button;
+export default AppButton;

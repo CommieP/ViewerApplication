@@ -8,10 +8,11 @@ const ModelPositionSlice = createSlice({
     reducers: {
         setModelPositionValue: (state, action) => {
             state.value = action.payload
+            console.log(state);
         }
     }
 })
 
-export const { ModelPositionAction } = ModelPositionSlice.actions
+export const { ModelPositionSet } = ModelPositionSlice.actions
 
 export default ModelPositionSlice.reducer
