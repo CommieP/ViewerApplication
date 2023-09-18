@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-import modelPositionSlicer from './reducers/modelPositionSlicer'
+import SetupSlicer from './reducers/SetupSlicer';
 
 const store =  configureStore({
   reducer: {
-    ModelPositionReducer : modelPositionSlicer
+    SetupReducer : SetupSlicer
   },
 })
 

@@ -7,7 +7,7 @@ import DeskTopControls from "../../components/DesktopControls";
 
 
 const Desktop = () => {
-    let ModelPosition = useSelector((state) => state.ModelPositionReducer.value);
+    let ModelPosition = useSelector((state) => state.SetupReducer.value.modelPosition);
 
     return (
         <div className="w-screen h-screen">
