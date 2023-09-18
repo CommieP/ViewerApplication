@@ -1,7 +1,7 @@
-const Title  = (Text) => {
+const DataTitle  = ({Text}) => {
     return (
         <div>{Text}</div>
     )
 }
 
-export default Title;
+export default DataTitle;

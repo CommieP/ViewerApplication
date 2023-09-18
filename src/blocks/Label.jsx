@@ -1,7 +1,7 @@
-const Label  = (Text) => {
+const DataLabel  = ({Text}) => {
     return (
         <div>{Text}</div>
     )
 }
 
-export default Label;
+export default DataLabel;

@@ -1,6 +1,6 @@
 const AppButton  = ({title, onClick}) => {
     return (
-        <button onClick={onClick}>{title}</button>
+        <button onClick={onClick} className="w-10 h-10">{title}</button>
     )
 }
 
