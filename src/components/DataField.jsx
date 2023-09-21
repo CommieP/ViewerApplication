@@ -13,7 +13,7 @@ const DataField = ({ title, data, field, handleChange }) => {
                 {dataKeys.map((item, index) => (
                     <div className="flex" key={index}>
                         <DataLabel Text={item + " : "} ></DataLabel>
-                        <NumberInput id={item} value={dataPoints[index][1]} key={index} onChange={(value) => handleChange({ item }, parseFloat(value), "modelPosition")} />
+                        <NumberInput id={item} value={dataPoints[index][1]} key={index} onChange={(value) => handleChange({ item }, parseFloat(value), field)} />
                     </div>
                 ))}
 

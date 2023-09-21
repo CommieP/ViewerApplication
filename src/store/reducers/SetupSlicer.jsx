@@ -7,6 +7,7 @@ const SetupSlice = createSlice({
     },
     reducers: {
         setSetupData: (state, action) => {
+            console.log(action.payload);
             state.value = action.payload
         }
     }

@@ -1,9 +1,6 @@
 import { useDispatch } from "react-redux";
 import { SetUpDataSet } from "../store/reducers/SetupSlicer";
-import NumberInput from "../blocks/NumberInput"
 import AppButton from "../blocks/Button";
-import DataLabel from "../blocks/Label";
-import DataTitle from "../blocks/Title";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DataField from "./DataField";
@@ -34,28 +31,24 @@ const SetupEditor = () => {
 
         console.log(position, value, type);
 
-        overalPosition = {
-            ...overalPosition,
-            [type]:{
-                ...overalPosition[type],
-                [position.item] : value
-            }
-        }
+        overalPosition[type][position.item] = value
 
         console.log(overalPosition);
 
-        SetSetupData(overalPosition)
+        SetSetupData(overalPosition);
     }
 
 
     return (
         <>
-            <DataField title={"Model Position"} data = {SetupData} field={"modelPosition"} handleChange={handleChange}></DataField>
-            <DataField title={"Model Position"} data = {SetupData} field={"modelPosition"} handleChange={handleChange}></DataField>
-            <DataField title={"Model Position"} data = {SetupData} field={"modelPosition"} handleChange={handleChange}></DataField>
-            <DataField title={"Model Position"} data = {SetupData} field={"modelPosition"} handleChange={handleChange}></DataField>
-            <DataField title={"Model Position"} data = {SetupData} field={"modelPosition"} handleChange={handleChange}></DataField>
-            <AppButton onClick={() => startScene()} title="Start"></AppButton>
+            <div className = "w-1/2 h-screen">
+                <DataField title={"Model Position"} data = {SetupData} field={"modelPosition"} handleChange={handleChange}></DataField>
+                <DataField title={"Model Rotation"} data = {SetupData} field={"modelRotation"} handleChange={handleChange}></DataField>
+                <DataField title={"Model Scale"} data = {SetupData} field={"modelScale"} handleChange={handleChange}></DataField>
+                <DataField title={"Camera Position"} data = {SetupData} field={"cameraPosition"} handleChange={handleChange}></DataField>
+                <DataField title={"Camera Rotation"} data = {SetupData} field={"cameraRotation"} handleChange={handleChange}></DataField>
+                <AppButton onClick={() => startScene()} title="Start"></AppButton>
+            </div>  
         </>
 
     )
