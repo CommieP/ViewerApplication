@@ -1,4 +1,5 @@
 import { useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 
 const GLTFModel = ({url, rotation, position, scale }) => {
     const model = useGLTF(url);
@@ -10,7 +11,6 @@ const GLTFModel = ({url, rotation, position, scale }) => {
     model.scene.scale.set(scale.x, scale.y, scale.z);
     model.scene.position.set(position.x, position.y, position.z);
 
-    console.log(model.scene);
 
     return(
         <primitive object={model.scene}></primitive>

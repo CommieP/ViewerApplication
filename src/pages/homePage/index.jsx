@@ -4,14 +4,13 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 
 
 const HomePage = () => {
-    const ModelPosition = useSelector((state) => state.SetupReducer.value.modelPosition);
-    console.log(ModelPosition);
+    const data = useSelector((state) => state.SetupReducer.value);
 
     return (
         <>
             <div className="flex">
                 <SetupEditor></SetupEditor>
-                <ThreeDPreview ModelPosition={ModelPosition}></ThreeDPreview>
+                <ThreeDPreview data={data}></ThreeDPreview>
             </div>
         </>
     )
